@@ -1,0 +1,148 @@
+Login As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =768
+        Width: =1366
+        ZIndex: =1
+
+    Label2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        Size: =25
+        Text: ="User Name"
+        Width: =323
+        X: =406
+        Y: =219
+        ZIndex: =3
+
+    TextInput1 As text:
+        Default: =""
+        Height: =76
+        HintText: ="ID"
+        Size: =20
+        Width: =500
+        X: =406
+        Y: =281
+        ZIndex: =4
+
+    Label3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =53
+        Size: =25
+        Text: ="Password"
+        Width: =269
+        X: =406
+        Y: =386
+        ZIndex: =5
+
+    TextInput2 As text:
+        Default: =""
+        Height: =70
+        HintText: ="Pass"
+        Mode: =TextMode.Password
+        Size: =20
+        Width: =497
+        X: =409
+        Y: =463
+        ZIndex: =6
+
+    Button1 As button:
+        Fill: =RGBA(109, 49, 162, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =99
+        OnSelect: |
+            =If(!IsBlank(LookUp('login validation',Title=TextInput1.Text And Passwords=TextInput2.Text).Title),Navigate('End User'),UpdateContext({Showforgetmessage:true}));
+            Reset(TextInput1);
+            Reset(TextInput2);
+            Refresh('end user')
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =20
+        Text: ="Login"
+        Width: =233
+        X: =530
+        Y: =591
+        ZIndex: =7
+
+    Label4 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        Size: =22
+        Text: ="Invalid Password or Email"
+        Visible: =Showforgetmessage
+        Width: =497
+        X: =456
+        Y: =538
+        ZIndex: =8
+
+    Button4 As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =71
+        OnSelect: =If(Button4.Pressed,TextInput2,TextMode.SingleLine,Password)
+        Text: =""
+        Width: =57
+        X: =845
+        Y: =463
+        ZIndex: =16
+
+    Rectangle5 As rectangle:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =146
+        Width: =1366
+        ZIndex: =17
+
+    Icon15 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        X: =40
+        Y: =40
+        ZIndex: =18
+
+    Icon16 As icon.Person:
+        Height: =80
+        Icon: =Icon.Person
+        Width: =74
+        X: =321
+        Y: =281
+        ZIndex: =19
+
+    Icon17 As icon.Lock:
+        Icon: =Icon.Lock
+        X: =326
+        Y: =463
+        ZIndex: =20
+
+    Label14 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =83
+        Size: =35
+        Text: ="Login User"
+        Width: =650
+        X: =379
+        Y: =40
+        ZIndex: =21
+
+    Icon18 As icon.People:
+        Height: =83
+        Icon: =Icon.People
+        Width: =97
+        X: =675
+        Y: =40
+        ZIndex: =22
+
+    Image13 As image:
+        Height: =150
+        Image: =powerapps
+        Width: =186
+        X: =1180
+        ZIndex: =23
+
+    Icon29 As icon.View:
+        Icon: =Icon.View
+        X: =842
+        Y: =463
+        ZIndex: =24
+

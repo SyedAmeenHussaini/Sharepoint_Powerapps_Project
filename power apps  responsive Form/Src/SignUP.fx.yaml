@@ -1,0 +1,207 @@
+SignUP As screen:
+    BackgroundImage: ='blue-abstract-gradient-wave-wallpaper'
+    ImagePosition: =ImagePosition.Fill
+
+    Image7 As image:
+        Height: =163
+        Image: =add_5606967
+        Width: =180
+        ZIndex: =1
+
+    Form3 As form:
+        DataSource: ='login validation'
+        DefaultMode: =FormMode.New
+        Height: =602
+        Width: =1366
+        Y: =166
+        ZIndex: =2
+
+        Title_DataCard3 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'login validation'],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'login validation'], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue15.Text
+            Width: =455
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue15 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =50
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue15.Y + DataCardValue15.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                Height: =DataCardKey15.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey15.Y
+                ZIndex: =4
+
+        Passwords_DataCard3 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Passwords"
+            Default: =ThisItem.Passwords
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'login validation'],DataSourceInfo.DisplayName,"Passwords")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =106
+            MaxLength: =DataSourceInfo([@'login validation'], DataSourceInfo.MaxLength, "Passwords")
+            Required: =false
+            Update: =DataCardValue16.Text
+            Width: =455
+            X: =1
+            Y: =0
+            ZIndex: =3
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =50
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =70
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue16.Y + DataCardValue16.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+    Label6 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =70
+        Size: =17
+        Text: ="Enter Your UserName"
+        Width: =283
+        X: =66
+        Y: =280
+        ZIndex: =3
+
+    Label9 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =66
+        Size: =17
+        Text: ="Set Your Password"
+        Width: =296
+        X: =535
+        Y: =280
+        ZIndex: =4
+
+    Button2 As button:
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =86
+        OnSelect: |-
+            =SubmitForm(Form3);
+            ResetForm(Form3);
+            Navigate(Login);
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =30
+        Text: ="SingnUp"
+        Width: =320
+        X: =426
+        Y: =496
+        ZIndex: =5
+
+    Icon1 As icon.Check:
+        Height: =45
+        Icon: =Icon.Check
+        Width: =46
+        X: =686
+        Y: =522
+        ZIndex: =6
+

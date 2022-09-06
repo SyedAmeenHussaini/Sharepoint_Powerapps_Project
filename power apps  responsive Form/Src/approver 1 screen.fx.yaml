@@ -1,0 +1,85 @@
+"'approver 1 screen' As screen":
+    Fill: =RGBA(187, 221, 140, 1)
+
+    Component1_1 As Component1:
+        Height: =192
+        Width: =1366
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =556
+        Items: ='end user'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =140
+        Width: =1366
+        Y: =192
+        ZIndex: =2
+
+        Image11 As image:
+            Height: =128
+            Image: ='new-customer-icon-3'
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.First_Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image11.Width - 104
+            X: =Image11.X + Image11.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Last Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height + 4
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Navigate('First Approver')
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Icon13 As icon.ChevronLeft:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =74
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate('admin login')
+        Width: =73
+        ZIndex: =3
+

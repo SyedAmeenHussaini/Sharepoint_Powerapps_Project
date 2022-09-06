@@ -1,0 +1,132 @@
+"'admin login' As screen":
+    Fill: =RGBA(141, 227, 198, 1)
+
+    Rectangle6 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =133
+        Width: =1366
+        ZIndex: =1
+
+    Icon21 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+    Icon22 As icon.ToolsWrench:
+        Height: =80
+        Icon: =Icon.ToolsWrench
+        Width: =94
+        X: =826
+        Y: =32
+        ZIndex: =3
+
+    Label16 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =112
+        Size: =35
+        Text: ="Admins Login"
+        Width: =383
+        X: =379
+        Y: =21
+        ZIndex: =4
+
+    Label18 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =25
+        Text: ="User Name"
+        Width: =224
+        X: =427
+        Y: =186
+        ZIndex: =5
+
+    TextInput3 As text:
+        Default: =""
+        Height: =60
+        Size: =20
+        Width: =521
+        X: =399
+        Y: =271
+        ZIndex: =6
+
+    Label19 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =25
+        Text: ="Password"
+        Width: =202
+        X: =431
+        Y: =359
+        ZIndex: =7
+
+    TextInput4 As text:
+        Default: =""
+        Height: =63
+        Mode: =TextMode.Password
+        Size: =20
+        Width: =521
+        X: =399
+        Y: =441
+        ZIndex: =8
+
+    Icon23 As icon.Person:
+        Icon: =Icon.Person
+        X: =335
+        Y: =273
+        ZIndex: =9
+
+    Icon24 As icon.Lock:
+        Icon: =Icon.Lock
+        X: =335
+        Y: =443
+        ZIndex: =10
+
+    Button13 As button:
+        Fill: =RGBA(141, 198, 63, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =86
+        OnSelect: |-
+            =If(!IsBlank(LookUp('login validation',Title=TextInput3.Text And Passwords=TextInput4.Text).Title),Navigate('approver 1 screen'),UpdateContext({Showforgetmessage:true}));
+            Reset(TextInput3);
+            Reset(TextInput4)
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =20
+        Text: ="Login Admin1"
+        Width: =262
+        X: =347
+        Y: =614
+        ZIndex: =11
+
+    Button14 As button:
+        Fill: =RGBA(151, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =86
+        OnSelect: |
+            =If(!IsBlank(LookUp('login validation',Title=TextInput3.Text And Passwords=TextInput4.Text).Title),Navigate('approver 2 screen'),UpdateContext({Showforgetmessage:true}));
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =20
+        Text: ="Login Admin2 "
+        Width: =254
+        X: =666
+        Y: =614
+        ZIndex: =12
+
+    Label20 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =56
+        Size: =20
+        Text: ="Invalid Id or Password"
+        Visible: =Showforgetmessage
+        Width: =502
+        X: =457
+        Y: =526
+        ZIndex: =13
+

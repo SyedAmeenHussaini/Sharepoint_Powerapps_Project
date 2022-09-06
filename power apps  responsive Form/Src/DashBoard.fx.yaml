@@ -1,0 +1,139 @@
+DashBoard As screen:
+
+    Image1 As image:
+        Height: =768
+        Image: ='lines-best-for-desktop-background-wallpaper-preview'
+        ImagePosition: =ImagePosition.Fill
+        Width: =1366
+        ZIndex: =1
+
+    Image4 As image:
+        Height: =140
+        Image: =powerapps
+        Width: =272
+        ZIndex: =2
+
+    Image5 As image:
+        Height: =152
+        Image: ='2519376'
+        Width: =245
+        X: =151
+        Y: =228
+        ZIndex: =3
+
+    Label1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =140
+        Size: =35
+        Text: ="Welcome To Miracle Shop"
+        Width: =716
+        X: =406
+        ZIndex: =4
+
+    Button3 As button:
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =70
+        OnSelect: =Navigate(Login)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =25
+        Text: ="SignIn"
+        Width: =216
+        X: =180
+        Y: =609
+        ZIndex: =7
+
+    Label7 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =100
+        Size: =25
+        Text: ="Existing User Click Here"
+        Width: =226
+        X: =180
+        Y: =388
+        ZIndex: =8
+
+    Icon6 As icon.ArrowDown:
+        X: =261
+        Y: =491
+        ZIndex: =9
+
+    Image20 As image:
+        Height: =190
+        Image: =add_5606967
+        Width: =256
+        X: =555
+        Y: =209
+        ZIndex: =10
+
+    Label8 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =73
+        Size: =25
+        Text: ="Singup For Click Here!"
+        Width: =200
+        X: =583
+        Y: =418
+        ZIndex: =11
+
+    Icon7 As icon.ArrowDown:
+        X: =651
+        Y: =511
+        ZIndex: =12
+
+    Button5 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =70
+        OnSelect: =Navigate(SignUP)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =25
+        Text: ="SignUp"
+        Width: =211
+        X: =583
+        Y: =609
+        ZIndex: =13
+
+    Icon19 As icon.Person:
+        Height: =142
+        Icon: =Icon.Person
+        Width: =237
+        X: =942
+        Y: =246
+        ZIndex: =14
+
+    Icon20 As icon.ArrowDown:
+        X: =1033
+        Y: =511
+        ZIndex: =15
+
+    Label15 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =112
+        Size: =25
+        Text: ="Admin Login Click Here"
+        Width: =249
+        X: =985
+        Y: =399
+        ZIndex: =16
+
+    Button11 As button:
+        Fill: =RGBA(99, 139, 44, 1)
+        Height: =70
+        OnSelect: =Navigate('admin login')
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =25
+        Text: ="Login"
+        Width: =206
+        X: =985
+        Y: =609
+        ZIndex: =17
+
