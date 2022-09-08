@@ -709,7 +709,9 @@ approverUser2 As screen:
         Height: =76
         OnSelect: |+
             =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"Rejected by approver 2",'approver 2':false,admin2:DataCardValue20.Selected,Comment2:DataCardValue21.Text});
+            
             ResetForm(Form1)
+            
             
         RadiusBottomLeft: =60
         RadiusBottomRight: =60

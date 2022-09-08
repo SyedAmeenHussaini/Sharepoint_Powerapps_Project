@@ -92,11 +92,13 @@
             DataCardValue23 As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =If(!DataCardValue38=true,DisplayMode.Disabled)
                 FalseText: ="Pending"
                 Height: =80
                 OnChange: |-
-                    =Patch('end user',First(Filter('end user','status '="Approve by approver 2")),{'status ':"final submitted",'Final Approve':true})
+                    =Patch('end user',First(Filter('end user','status '="Approve by approver 2")),{'status ':"final submitted",'Final Approve':true});
+                    Navigate(Animation2);
+                    Reset(DataCardValue23)
                 OnCheck: =
                 Size: =20
                 TrueText: ="Approve"
@@ -523,8 +525,9 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
-                FalseText: ="Pending"
+                FalseText: ="pending"
                 Height: =53
+                OnChange: =
                 Size: =20
                 TrueText: ="Approve"
                 Width: =168
