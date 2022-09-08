@@ -32,7 +32,6 @@
         Icon: =Icon.Check
         OnSelect: |+
             =
-            SubmitForm(Form4);
             ResetForm(Form4);
             Navigate(Animation)
             
@@ -754,7 +753,7 @@
         FontWeight: =FontWeight.Bold
         Height: =75
         OnSelect: |+
-            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"approved rejected",'approve 1':false});
+            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"approved rejected",'approve 1':false,'Comment 1':DataCardValue57.Text,admin1:ComboBox1});
             
             
         RadiusBottomLeft: =60
@@ -773,7 +772,7 @@
         FontWeight: =FontWeight.Bold
         Height: =75
         OnSelect: |
-            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"approved 1",'approve 1':true});
+            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"approved 1",'approve 1':true,'Comment 1':DataCardValue57.Text,admin1:ComboBox1});
         RadiusBottomLeft: =60
         RadiusBottomRight: =60
         RadiusTopLeft: =60
