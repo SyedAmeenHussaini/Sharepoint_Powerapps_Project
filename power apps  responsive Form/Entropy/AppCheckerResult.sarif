@@ -494,19 +494,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "approverUser2.Form1.Comment2_DataCard1.Text.AccessibleLabel"
+                  "fullyQualifiedName": "approverUser2.Form1.Comment2_DataCard4.DataCardValue21.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "approverUser2.Form1.Comment2_DataCard1.Text.AccessibleLabel",
+                  "fullyQualifiedName": "approverUser2.Form1.Comment2_DataCard4.DataCardValue21.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "approverUser2",
-                "type": "approverUser2.Form1.Comment2_DataCard1.Text"
+                "type": "approverUser2.Form1.Comment2_DataCard4.DataCardValue21"
               }
             }
           ],
@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "approverUser2.ComboBox2.AccessibleLabel"
+                  "fullyQualifiedName": "approverUser2.Form1.admin2_DataCard2.DataCardValue20.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "approverUser2.ComboBox2.AccessibleLabel",
+                  "fullyQualifiedName": "approverUser2.Form1.admin2_DataCard2.DataCardValue20.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "approverUser2",
-                "type": "approverUser2.ComboBox2"
+                "type": "approverUser2.Form1.admin2_DataCard2.DataCardValue20"
               }
             }
           ],
@@ -2024,19 +2024,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'First Approver'.Form4.'Comment 1_DataCard6'.DataCardValue57.AccessibleLabel"
+                  "fullyQualifiedName": "'First Approver'.Form4.'Comment 1_DataCard3'.DataCardValue13.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'First Approver'.Form4.'Comment 1_DataCard6'.DataCardValue57.AccessibleLabel",
+                  "fullyQualifiedName": "'First Approver'.Form4.'Comment 1_DataCard3'.DataCardValue13.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "First Approver",
-                "type": "'First Approver'.Form4.'Comment 1_DataCard6'.DataCardValue57"
+                "type": "'First Approver'.Form4.'Comment 1_DataCard3'.DataCardValue13"
               }
             }
           ],
@@ -2054,49 +2054,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'First Approver'.ComboBox1.AccessibleLabel"
+                  "fullyQualifiedName": "'First Approver'.Form4.admin1_DataCard3.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'First Approver'.ComboBox1.AccessibleLabel",
+                  "fullyQualifiedName": "'First Approver'.Form4.admin1_DataCard3.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "First Approver",
-                "type": "'First Approver'.ComboBox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'End User'.Icon11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'End User'.Icon11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "End User",
-                "type": "'End User'.Icon11"
+                "type": "'First Approver'.Form4.admin1_DataCard3.DataCardValue19"
               }
             }
           ],
@@ -2138,6 +2108,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'End User'.Icon11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'End User'.Icon11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "End User",
+                "type": "'End User'.Icon11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2187,6 +2187,36 @@
                 "member": "AccessibleLabel",
                 "module": "End User",
                 "type": "'End User'.Form9.Comment2_DataCard3.DataCardValue12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'EndUser view'.FormViewer2.'Final Approve_DataCard1'.DataCardValue23.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'EndUser view'.FormViewer2.'Final Approve_DataCard1'.DataCardValue23.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "EndUser view",
+                "type": "'EndUser view'.FormViewer2.'Final Approve_DataCard1'.DataCardValue23"
               }
             }
           ],

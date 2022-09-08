@@ -14,6 +14,141 @@ approverUser2 As screen:
         Y: =202
         ZIndex: =2
 
+        admin2_DataCard2 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="admin2"
+            Default: =ThisItem.admin2
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'end user'],DataSourceInfo.DisplayName,"admin2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue20.Selected
+            Width: =455
+            X: =2
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey22 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue20 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["DisplayName","Email","Picture"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'end user'].admin2)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["DisplayName"]
+                SearchItems: =Choices('end user'.admin2,DataCardValue20.SearchText)
+                SelectMultiple: =false
+                Template: =ListItemTemplate.Person
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey22.Y + DataCardKey22.Height + 5
+                ZIndex: =2
+
+            ErrorMessage31 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue20.Y + DataCardValue20.Height
+                ZIndex: =3
+
+            StarVisible31 As label:
+                Align: =Align.Center
+                Height: =DataCardKey22.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey22.Y
+                ZIndex: =4
+
+        Comment2_DataCard4 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Comment2"
+            Default: =ThisItem.Comment2
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'end user'],DataSourceInfo.DisplayName,"Comment2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'end user'], DataSourceInfo.MaxLength, "Comment2")
+            Required: =false
+            Update: =DataCardValue21.Text
+            Width: =455
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey23 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey23.Y + DataCardKey23.Height + 5
+                ZIndex: =2
+
+            ErrorMessage32 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible32 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23.Y
+                ZIndex: =4
+
         First_Name_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -421,58 +556,6 @@ approverUser2 As screen:
                 Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        "'approver 2_DataCard1' As typedDataCard.toggleEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="approver2"
-            Default: =ThisItem.'approver 2'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'end user'],DataSourceInfo.DisplayName,"approver2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =187
-            Required: =false
-            Update: =
-            Width: =455
-            X: =0
-            Y: =2
-            ZIndex: =3
-
-            DataCardKey12 As label:
-                AutoHeight: =true
-                FontWeight: =FontWeight.Bold
-                Height: =34
-                Size: =25
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =16
-                Y: =88
-                ZIndex: =1
-
-            ErrorMessage12 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =
-                ZIndex: =3
-
-            StarVisible12 As label:
-                Align: =Align.Center
-                Height: =DataCardKey12.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey12.Y
-                ZIndex: =4
-
         Bid_quantity_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Bid_quantity"
@@ -484,7 +567,7 @@ approverUser2 As screen:
             Required: =false
             Update: =Value(DataCardValue7.Text)
             Width: =455
-            X: =1
+            X: =0
             Y: =2
             ZIndex: =3
 
@@ -551,7 +634,7 @@ approverUser2 As screen:
             Required: =false
             Update: =Value(DataCardValue8.Text)
             Width: =455
-            X: =2
+            X: =1
             Y: =2
             ZIndex: =3
 
@@ -607,90 +690,6 @@ approverUser2 As screen:
                 Y: =DataCardKey8.Y
                 ZIndex: =4
 
-        Comment2_DataCard1 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Comment2"
-            Default: =ThisItem.Comment2
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'end user'],DataSourceInfo.DisplayName,"Comment2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =139
-            MaxLength: =DataSourceInfo([@'end user'], DataSourceInfo.MaxLength, "Comment2")
-            Required: =false
-            Update: =Text.Text
-            Width: =455
-            X: =0
-            Y: =3
-            ZIndex: =3
-
-            DataCardKey13 As label:
-                AutoHeight: =true
-                FontWeight: =FontWeight.Bold
-                Height: =34
-                Size: =20
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =53
-                ZIndex: =1
-
-            Text As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =50
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =20
-                Tooltip: =Parent.DisplayName
-                Width: =425
-                X: =15
-                Y: =99
-                ZIndex: =2
-
-            ErrorMessage13 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =Text.Y + Text.Height
-                ZIndex: =3
-
-            StarVisible13 As label:
-                Align: =Align.Center
-                Height: =DataCardKey13.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey13.Y
-                ZIndex: =4
-
-    ComboBox2 As combobox:
-        DisplayFields: =["DisplayName"]
-        IsSearchable: =false
-        Items: |-
-            =Office365Users.SearchUser({searchTerm:ComboBox2.SearchText}).DisplayName
-        SearchFields: =["DisplayName"]
-        SearchItems: =[]
-        Width: =401
-        X: =16
-        Y: =538
-        ZIndex: =3
-
     Icon9 As icon.Save:
         Fill: =RGBA(141, 198, 63, 1)
         Height: =97
@@ -709,7 +708,8 @@ approverUser2 As screen:
         FontWeight: =FontWeight.Bold
         Height: =76
         OnSelect: |+
-            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"Rejected by approver 2",'approver 2':false,Comment2:Text.Text})
+            =Patch('end user',First(Filter('end user','status '="Pending")),{'status ':"Rejected by approver 2",'approver 2':false,admin2:DataCardValue20.Selected,Comment2:DataCardValue21.Text});
+            ResetForm(Form1)
             
         RadiusBottomLeft: =60
         RadiusBottomRight: =60
@@ -727,7 +727,8 @@ approverUser2 As screen:
         FontWeight: =FontWeight.Bold
         Height: =76
         OnSelect: |+
-            =Patch('end user',First(Filter('end user','status '="approved 1")),{'status ':"Approve by approver 2",'approver 2':true})
+            =Patch('end user',First(Filter('end user','status '="approved 1")),{'status ':"Approve by approver 2",'approver 2':true,admin2:DataCardValue20.Selected,Comment2:DataCardValue21.Text});
+            ResetForm(Form1)
             
         RadiusBottomLeft: =60
         RadiusBottomRight: =60

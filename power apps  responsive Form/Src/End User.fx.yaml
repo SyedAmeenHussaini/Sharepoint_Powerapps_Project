@@ -21,9 +21,9 @@
         Height: =70
         Icon: =Icon.Save
         OnSelect: |
-            =Patch('end user',Defaults('end user'),{First_Name:DataCardValue84.Text,'Last Name':DataCardValue85.Text,'Full Name':DataCardValue86.Text,'Email Id':DataCardValue87.Text,'Bid Id':DataCardValue88.Text,Bid_value:Value(DataCardValue89.Text),Bid_quantity:Value(DataCardValue90.Text),Total:Value(DataCardValue91.Text),'status ':"Pending",admin1:Blank(),admin2:Blank(),'Comment 1':DataCardValue11.Text,Comment2:DataCardValue12.Text,'Final response':false});
+            =Patch('end user',Defaults('end user'),{First_Name:DataCardValue84.Text,'Last Name':DataCardValue85.Text,'Full Name':DataCardValue86.Text,'Email Id':DataCardValue87.Text,'Bid Id':DataCardValue88.Text,Bid_value:Value(DataCardValue89.Text),Bid_quantity:Value(DataCardValue90.Text),Total:Value(DataCardValue91.Text),'status ':"Pending",admin1:Blank(),admin2:Blank(),'Comment 1':"",Comment2:"",'Final Approve':false});
             
-            
+            ResetForm(Form9);
             Navigate(Gallery1);
             
             Refresh('end user')
