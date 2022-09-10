@@ -2,17 +2,17 @@
     Fill: =RGBA(187, 221, 140, 1)
 
     Component1_1 As Component1:
-        Height: =192
+        Height: =142
         Width: =1366
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =556
-        Items: ='end user'
+        Height: =553
+        Items: =Filter('end user',StartsWith(Title,TextInput7.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =140
         Width: =1366
-        Y: =192
+        Y: =215
         ZIndex: =2
 
         Image11 As image:
@@ -76,10 +76,28 @@
             ZIndex: =5
 
     Icon13 As icon.ChevronLeft:
-        Fill: =RGBA(255, 0, 0, 1)
-        Height: =74
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =70
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate('admin login')
-        Width: =73
+        Width: =76
         ZIndex: =3
+
+    TextInput7 As text:
+        Default: =
+        Height: =73
+        HintText: ="Search"
+        Size: =18
+        Width: =435
+        X: =930
+        Y: =142
+        ZIndex: =4
+
+    Icon31 As icon.Search:
+        Height: =50
+        Icon: =Icon.Search
+        Width: =87
+        X: =1255
+        Y: =153
+        ZIndex: =5
 

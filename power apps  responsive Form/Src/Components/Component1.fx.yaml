@@ -10,15 +10,16 @@ Component1 As CanvasComponent:
 
     Rectangle3 As rectangle:
         Fill: =RGBA(109, 49, 162, 1)
-        Height: =241
+        Height: =176
         Width: =1366
         ZIndex: =1
 
     Image3 As image:
-        Height: =242
+        Height: =176
         Image: ='pngtree-empty-coupon-or-blank-form-filling-by-person-png-image_4689917'
         ImagePosition: =ImagePosition.Fill
-        Width: =400
+        Width: =440
+        X: =75
         ZIndex: =2
 
     Label5 As label:
@@ -29,7 +30,7 @@ Component1 As CanvasComponent:
         Size: =25
         Text: ="Varification & Approvel By User."
         Width: =514
-        X: =586
-        Y: =54
+        X: =706
+        Y: =27
         ZIndex: =3
 

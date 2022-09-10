@@ -7,24 +7,28 @@ Endusergallery As screen:
         Width: =1366
         ZIndex: =1
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
-        Height: =768
-        Items: ='end user'
+    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver4.0'":
+        Height: =654
+        Items: |-
+            =
+            Filter('end user',StartsWith(Title,TextInput6.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(168, Self.Height - 60)
+        TemplateSize: =Min(128, Self.Height - 60)
         Width: =1366
+        Y: =113
         ZIndex: =1
 
-        Image8 As image:
-            Height: =168
-            Image: =download
+        Image9 As image:
+            Height: =96
+            Image: ='new-customer-icon-3'
             OnSelect: =Select(Parent)
-            Width: =160
-            X: =104
+            Width: =96
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        Title1 As label:
+        Title6 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -35,42 +39,12 @@ Endusergallery As screen:
             Text: |
                 =ThisItem.First_Name
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image8.Width - 104
-            X: =264
-            Y: =9
+            Width: =Parent.TemplateWidth - Image9.Width - 104
+            X: =Image9.X + Image9.Width + 24
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =2
 
-        Subtitle1 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =25
-            Text: =ThisItem.'Last Name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height + 2
-            ZIndex: =3
-
-        Body1 As label:
-            Height: =Self.Size * 4
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
-            Text: =ThisItem.'Full Name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Subtitle1.Width
-            X: =Subtitle1.X
-            Y: =Subtitle1.Y + Subtitle1.Height + 4
-            ZIndex: =4
-
-        NextArrow1 As icon.ChevronRight:
+        NextArrow6 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
@@ -84,19 +58,43 @@ Endusergallery As screen:
             Width: =60
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =5
+            ZIndex: =3
 
-        Separator1 As rectangle:
+        Separator6 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =6
+            ZIndex: =4
+
+    Rectangle7 As rectangle:
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =113
+        Width: =1366
+        ZIndex: =4
+
+    TextInput6 As text:
+        Default: =""
+        Height: =67
+        HintText: ="Search"
+        Size: =18
+        Width: =479
+        X: =792
+        Y: =29
+        ZIndex: =5
+
+    Icon12 As icon.Search:
+        Height: =67
+        Icon: =Icon.Search
+        Width: =41
+        X: =1195
+        Y: =29
+        ZIndex: =6
 
     Icon26 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(DashBoard)
-        X: =14
-        Y: =14
-        ZIndex: =2
+        X: =36
+        Y: =34
+        ZIndex: =7
 

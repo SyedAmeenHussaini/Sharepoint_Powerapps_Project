@@ -6,17 +6,18 @@
         Width: =1366
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =583
-        Items: ='end user'
+        Height: =528
+        Items: =Filter('end user',StartsWith(Title,TextInput8.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
         Width: =1366
-        Y: =185
+        Y: =240
         ZIndex: =2
 
         Image12 As image:
             Height: =128
+            Image: ='new-customer-icon-3'
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
@@ -76,6 +77,24 @@
 
     Icon14 As icon.ChevronLeft:
         Fill: =RGBA(255, 0, 0, 1)
+        Height: =74
         Icon: =Icon.ChevronLeft
+        Width: =76
         ZIndex: =3
+
+    TextInput8 As text:
+        Default: =""
+        Height: =67
+        HintText: ="Search"
+        Size: =18
+        Width: =482
+        X: =884
+        Y: =173
+        ZIndex: =4
+
+    Icon32 As icon.Search:
+        Icon: =Icon.Search
+        X: =1266
+        Y: =173
+        ZIndex: =5
 

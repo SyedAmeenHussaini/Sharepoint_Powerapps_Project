@@ -58,7 +58,7 @@
         "Name": "Rectangle3",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 316,
+        "PublishOrderIndex": 321,
         "Rules": [
           {
             "Category": "Design",
@@ -128,7 +128,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "241",
+            "InvariantScript": "176",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -242,7 +242,7 @@
         "Name": "Image3",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 317,
+        "PublishOrderIndex": 322,
         "Rules": [
           {
             "Category": "Data",
@@ -264,7 +264,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "75",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -276,13 +276,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "400",
+            "InvariantScript": "440",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "242",
+            "InvariantScript": "176",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -527,7 +527,7 @@
         "Name": "Label5",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 318,
+        "PublishOrderIndex": 323,
         "Rules": [
           {
             "Category": "Data",
@@ -663,13 +663,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "586",
+            "InvariantScript": "706",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "54",
+            "InvariantScript": "27",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -805,7 +805,7 @@
       "imageHeader",
       "headerText"
     ],
-    "LastModifiedTimestamp": "637982635690708153",
+    "LastModifiedTimestamp": "637984471022776397",
     "Name": "Component1",
     "Rules": [
       {
@@ -895,7 +895,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637982635690708153",
+  "LastModifiedTimestamp": "637984471022776397",
   "Name": "2f2951a6711f465ba234344c209d5658",
   "OverridableProperties": {},
   "Version": "637975759580734442"
