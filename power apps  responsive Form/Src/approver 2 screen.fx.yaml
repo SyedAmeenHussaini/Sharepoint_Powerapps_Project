@@ -2,7 +2,7 @@
     Fill: =RGBA(238, 204, 204, 1)
 
     Component1_3 As Component1:
-        Height: =185
+        Height: =173
         Width: =1366
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -94,7 +94,7 @@
 
     Icon32 As icon.Search:
         Icon: =Icon.Search
-        X: =1266
-        Y: =173
+        X: =1302
+        Y: =176
         ZIndex: =5
 
