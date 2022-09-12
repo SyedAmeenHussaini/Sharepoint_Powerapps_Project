@@ -98,7 +98,7 @@
                 OnChange: |-
                     =Patch('end user',First(Filter('end user','status '="Approve by approver 2")),{'status ':"final submitted",'Final Approve':true});
                     
-                    Navigate(Animation2);
+                    
                     Reset(DataCardValue23)
                 OnCheck: =
                 Size: =20
