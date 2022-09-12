@@ -1,0 +1,59 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://india-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="powerappstoautomate" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="powerapps to automate" />
+  <grammars>
+    <jsonTypes targetNamespace="https://india-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ManualTriggerInput_Compose_Inputs_def" />
+      <string name="ManualTriggerInput_Createitem_First_Name_def" />
+      <string name="ManualTriggerInput_Createitem_LastName_def" />
+      <string name="ManualTriggerInput_Createitem_FullName_def" />
+      <string name="ManualTriggerInput_Createitem_EmailId_def" />
+      <string name="ManualTriggerInput_Createitem_BidId_def" />
+      <number name="ManualTriggerInput_Createitem_Bid_value_def" />
+      <number name="ManualTriggerInput_Createitem_Bid_quantity_def" />
+      <number name="ManualTriggerInput_Createitem_Total_def" />
+      <object name="ManualTriggerInput">
+        <property name="Compose_Inputs" type="string" />
+        <property name="Createitem_First_Name" type="string" />
+        <property name="Createitem_LastName" type="string" />
+        <property name="Createitem_FullName" type="string" />
+        <property name="Createitem_EmailId" type="string" />
+        <property name="Createitem_BidId" type="string" />
+        <property name="Createitem_Bid_value" type="number" />
+        <property name="Createitem_Bid_quantity" type="number" />
+        <property name="Createitem_Total" type="number" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://india-001.azure-apim.net/apim/logicflows">
+    <resource path="/{connectionId}/triggers/manual/run">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="Run">
+        <doc title="Runs a logic flow trigger." />
+        <request>
+          <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
+            <doc title="The api version" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="Compose_Inputs" path="/Compose_Inputs" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_First_Name" path="/Createitem_First_Name" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_LastName" path="/Createitem_LastName" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_FullName" path="/Createitem_FullName" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_EmailId" path="/Createitem_EmailId" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_BidId" path="/Createitem_BidId" type="xs:string" required="true" />
+            <param style="plain" name="Createitem_Bid_value" path="/Createitem_Bid_value" type="xs:double" required="true" />
+            <param style="plain" name="Createitem_Bid_quantity" path="/Createitem_Bid_quantity" type="xs:double" required="true" />
+            <param style="plain" name="Createitem_Total" path="/Createitem_Total" type="xs:double" required="true" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="logicflows" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

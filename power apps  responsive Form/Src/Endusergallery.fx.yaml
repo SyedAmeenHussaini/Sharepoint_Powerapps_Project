@@ -11,12 +11,12 @@ Endusergallery As screen:
         Height: =654
         Items: |-
             =
-            Filter('end user',StartsWith(Title,TextInput6.Text))
+            Filter('end user',StartsWith(First_Name,TextInput6.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(128, Self.Height - 60)
         Width: =1366
-        Y: =113
+        Y: =114
         ZIndex: =1
 
         Image9 As image:

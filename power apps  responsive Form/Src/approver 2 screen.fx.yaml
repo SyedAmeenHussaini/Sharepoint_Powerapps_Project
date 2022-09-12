@@ -7,7 +7,7 @@
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =528
-        Items: =Filter('end user',StartsWith(Title,TextInput8.Text))
+        Items: =Filter('end user',StartsWith(First_Name,TextInput8.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
