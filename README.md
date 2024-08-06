@@ -1,6 +1,3 @@
-
-Certainly! Here’s a description for a GitHub repository for a multi-approval workflow project using SharePoint and PowerApps:
-
 SharePoint PowerApps Multi-Approval Workflow
 This repository contains the code and resources for creating a multi-approval workflow using SharePoint and PowerApps. The workflow allows multiple approvers to review and approve requests, automating the approval process and maintaining a record in SharePoint.
 
